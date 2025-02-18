@@ -8,4 +8,4 @@ def about(request):
     return HttpResponse("About")
 
 def contact(request):
-    return HttpResponse("Submit an issue")
+    return render(request, 'contact.html')
