@@ -4,5 +4,7 @@ from . import views
 # url configuration module
 # Mapping URLs
 urlpatterns = [
-    path('', views.say_hello)
+    path('', views.main_page),
+    path('about/', views.about),
+    path('contact/', views.contact),
 ]
