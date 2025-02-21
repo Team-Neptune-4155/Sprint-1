@@ -1,26 +1,35 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Bootstrap</title>
-  <!-- Bootstrap CSS -->
-  <link 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
-    rel="stylesheet" 
-    integrity="sha384-9ndCyUa6mY8YdN5T0B73psZyfJt9S3jdE6sD38zL68a13wSkV+1BpcGKt65tVQuL" 
-    crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Building Availability</title>
+  <link rel="stylesheet" href="{% static 'default.css' %}">
 </head>
 <body>
-  <div class="container">
-    <h1 class="text-primary">Hello, Bootstrap!</h1>
-    <p>This is a simple example using Bootstrap.</p>
-  </div>
+  <header>
+    <div class="logo">
+      <h1>Campus Room Availability</h1>
+    </div>
+  </header>
 
-  <!-- Bootstrap Bundle with Popper -->
-  <script 
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+6Q77R8egLL1qXKFnx0E9+OpIYQ=="
-    crossorigin="anonymous"></script>
+  <main>
+    <div class="side-panel" id="side-panel">
+      <button id="toggle-panel">☰</button>
+      <div class="panel-content">
+        <h2>Room Availability</h2>
+        <div id="room-availability"></div>
+      </div>
+    </div>
+    <div class="map-container">
+      <svg width="891" height="764" viewBox="0 0 891 764" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M75.5 763H219.5V726.5H259V521.5L285.5 526.5V442.5L259 452V253.5H845V189.5H890V59.5H845V30H745V0.5H380V30H272.5V108H228.5C216.386 67.3 202.599 55.2484 172 43C138.052 34.4685 119.758 37.3762 89 62C67.6619 88.1435 61.5 108 65 147C73.5 199 136.547 214.405 136.5 215.5C136.453 216.595 136.5 253.5 136.5 253.5H39V399.5H17L1 489L17 574.5H39V726.5H75.5V763Z" stroke="white"/>
+      </svg>
+    </div>
+  </main>
+
+  <script src="{% static 'script.js' %}"></script>
 </body>
 </html>
